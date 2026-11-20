@@ -1,0 +1,69 @@
+<HTML>
+<HEAD>
+    <TITLE>Картування зображення — Інтерактивна карта</TITLE>
+    <meta charset="UTF-8">
+    <STYLE>
+        .map-frame {
+            display: inline-block;
+            padding: 8px;
+            background-color: #FFFFFF;
+            border: 3px solid #C71585;
+            border-radius: 10px;
+        }
+        .map-frame img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+    </STYLE>
+</HEAD>
+<BODY BGCOLOR="#FFF0F5" TEXT="#4A0033">
+
+    <P>
+        <A HREF="Shestakova_AboutMe.htm">← На головну сторінку (Про себе та хобі)</A>
+    </P>
+
+    <H1 ALIGN="CENTER">
+        <FONT COLOR="#C71585" FACE="Arial">Інтерактивна карта з сердечками</FONT>
+    </H1>
+
+    <P ALIGN="CENTER">
+        Наведіть курсор та натисніть на одне із сердечок на зображенні, щоб відкрити відповідну сторінку:
+    </P>
+
+    <CENTER>
+        <DIV CLASS="map-frame">
+            <IMG SRC="hearts.png" USEMAP="#hearts-map" ALT="Карта з трьома сердечками: про себе, посилання, Батьківщина">
+        </DIV>
+    </CENTER>
+
+    <MAP NAME="hearts-map">
+
+        <AREA SHAPE="poly"
+              COORDS="180,120, 120,120, 70,170, 80,260, 180,360, 280,260, 290,170, 240,120"
+              HREF="Shestakova_AboutMe.htm"
+              ALT="Ліве сердечко — Про себе та хобі"
+              TITLE="Про себе та хобі (Shestakova_AboutMe.htm)">
+
+        <AREA SHAPE="poly"
+              COORDS="500,180, 440,180, 390,230, 405,330, 500,440, 605,330, 615,230, 560,180"
+              HREF="Shestakova_Links.htm"
+              ALT="Центральне сердечко — Мої гіперпосилання"
+              TITLE="Мої гіперпосилання (Shestakova_Links.htm)">
+
+        <AREA SHAPE="poly"
+              COORDS="820,65, 765,65, 725,110, 735,190, 820,275, 905,190, 915,110, 875,65"
+              HREF="Shestakova_Homeland.htm"
+              ALT="Праве сердечко — Моя Батьківщина (Хорол)"
+              TITLE="Моя Батьківщина — місто Хорол (Shestakova_Homeland.htm)">
+
+    </MAP>
+
+    <BR><BR>
+
+    <P>
+        <U>Студентка групи 301-ТН Шестакова А.Є.</U>
+    </P>
+
+</BODY>
+</HTML>
