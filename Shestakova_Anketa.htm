@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Анкета</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            background-color: #fff5f8;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        table {
+            background-color: #ffeef4;
+            border: 1px solid #e3a6be;
+            border-spacing: 5px;
+            width: 600px;
+        }
+        td {
+            border: 1px solid #e3a6be;
+            padding: 6px 10px;
+            vertical-align: middle;
+            font-size: 16px;
+            color: #4a2334;
+        }
+        .header-cell {
+            text-align: center;
+            color: #c2185b;
+            font-size: 26px;
+            font-weight: bold;
+            padding: 12px;
+            background-color: #ffdce8;
+        }
+        .num-col {
+            width: 25px;
+            text-align: center;
+        }
+        .label-col {
+            width: 220px;
+        }
+        .top-align {
+            vertical-align: top;
+            padding-top: 10px;
+        }
+        input[type="text"], input[type="email"], input[type="tel"] {
+            width: 96%;
+            padding: 2px 4px;
+            border: 1px solid #d99bb3;
+            background-color: #ffffff;
+            color: #3b1c29;
+        }
+        input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus {
+            outline: none;
+            border-color: #d85a8a;
+            background-color: #fffafc;
+        }
+        ol {
+            margin: 0;
+            padding-left: 25px;
+        }
+        ol li {
+            margin-bottom: 3px;
+        }
+        ol li input[type="text"] {
+            width: 92%;
+        }
+        .buttons-cell {
+            padding: 10px;
+            background-color: #ffe6ef;
+        }
+        .buttons-cell input {
+            padding: 4px 12px;
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            cursor: pointer;
+            background-color: #ffd1e2;
+            border: 1px solid #d48ba7;
+            color: #4a2334;
+            border-radius: 3px;
+        }
+        .buttons-cell input:hover {
+            background-color: #ffc0d8;
+        }
+        .btn-reset {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<form action="#" method="post">
+    <table>
+        <tr>
+            <td colspan="3" class="header-cell">Анкета</td>
+        </tr>
+        <tr>
+            <td class="num-col">1.</td>
+            <td class="label-col">Прізвище</td>
+            <td><input type="text" name="surname"></td>
+        </tr>
+        <tr>
+            <td class="num-col">2.</td>
+            <td class="label-col">Ім'я, по батькові</td>
+            <td><input type="text" name="name_patronymic"></td>
+        </tr>
+        <tr>
+            <td class="num-col">3.</td>
+            <td class="label-col">Число і рік народження</td>
+            <td><input type="text" name="birthdate"></td>
+        </tr>
+        <tr>
+            <td class="num-col">4.</td>
+            <td class="label-col">Домашня адреса</td>
+            <td><input type="text" name="address"></td>
+        </tr>
+        <tr>
+            <td class="num-col">5.</td>
+            <td class="label-col">Місце навчання (роботи)</td>
+            <td><input type="text" name="workplace"></td>
+        </tr>
+        <tr>
+            <td class="num-col">6.</td>
+            <td class="label-col">Домашній (робочий) телефон</td>
+            <td><input type="tel" name="phone"></td>
+        </tr>
+        <tr>
+            <td class="num-col">7.</td>
+            <td class="label-col">E-mail</td>
+            <td><input type="email" name="email"></td>
+        </tr>
+        <tr>
+            <td class="num-col top-align">8.</td>
+            <td class="label-col top-align">Область наукових інтересів</td>
+            <td>
+                <ol>
+                    <li><input type="text" name="interest_1"></li>
+                    <li><input type="text" name="interest_2"></li>
+                    <li><input type="text" name="interest_3"></li>
+                    <li><input type="text" name="interest_4"></li>
+                    <li><input type="text" name="interest_5"></li>
+                    <li><input type="text" name="interest_6"></li>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" class="buttons-cell">
+                <input type="reset" value="Відмінити введення" class="btn-reset"><br>
+                <input type="submit" value="Надіслати дані та перейти до 2 етапу реєстрації">
+            </td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>

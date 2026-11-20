@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма замовлення товару</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff5f8;
+            display: flex;
+            justify-content: center;
+            padding: 25px;
+            color: #4a2334;
+        }
+        table {
+            background-color: #ffffff;
+            border: 1px solid #e5adc3;
+            border-collapse: collapse;
+            width: 550px;
+            box-shadow: 0 3px 10px rgba(216, 90, 138, 0.12);
+        }
+        th {
+            background-color: #f29cb9;
+            color: #ffffff;
+            font-size: 20px;
+            padding: 12px;
+            text-align: center;
+        }
+        td {
+            border: 1px solid #f2cad9;
+            padding: 10px 12px;
+            vertical-align: top;
+            font-size: 14px;
+        }
+        .label-col {
+            width: 45%;
+            font-weight: bold;
+            background-color: #fff0f5;
+        }
+        input[type="text"], select, textarea {
+            width: 95%;
+            padding: 5px;
+            border: 1px solid #dfa4bc;
+            border-radius: 4px;
+            font-family: inherit;
+            color: #3b1c29;
+            background-color: #fffdfd;
+        }
+        input[type="text"]:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #d85a8a;
+            background-color: #fff8fb;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            accent-color: #d85a8a;
+        }
+        .hint {
+            font-size: 11px;
+            color: #8c5269;
+            display: block;
+            margin-top: 4px;
+            font-weight: normal;
+        }
+        .actions {
+            text-align: center;
+            background-color: #fff0f5;
+        }
+        .actions input {
+            padding: 7px 16px;
+            margin: 0 5px;
+            cursor: pointer;
+            font-size: 14px;
+            background-color: #ffd6e6;
+            border: 1px solid #d68aa8;
+            border-radius: 4px;
+            color: #4a2334;
+        }
+        .actions input:hover {
+            background-color: #ffc2da;
+        }
+    </style>
+</head>
+<body>
+
+<form action="#" method="post">
+    <table>
+        <tr>
+            <th colspan="2">Оформлення замовлення на товар</th>
+        </tr>
+        <tr>
+            <td class="label-col">
+                <label for="bank_account">Номер банківського рахунку:</label>
+            </td>
+            <td>
+                <input type="text" id="bank_account" name="bank_account" placeholder="UA000000000000000000000000000" required>
+            </td>
+        </tr>
+        <tr>
+            <td class="label-col">
+                <label for="personal_id">Особистий номер користувача:</label>
+            </td>
+            <td>
+                <input type="text" id="personal_id" name="personal_id" placeholder="Введіть ваш ID" required>
+            </td>
+        </tr>
+        <tr>
+            <td class="label-col">
+                <label for="products">Список товарів:</label>
+                <span class="hint">(Утримуйте Ctrl або Shift для вибору декількох позицій)</span>
+            </td>
+            <td>
+                <select id="products" name="products[]" multiple size="5" required>
+                    <option value="laptop">Ноутбук ASUS VivoBook</option>
+                    <option value="mouse">Бездротова миша Logitech</option>
+                    <option value="keyboard">Механічна клавіатура Keychron</option>
+                    <option value="monitor">Монітор 24" Dell FullHD</option>
+                    <option value="headphones">Навушники Sony WH-1000XM5</option>
+                    <option value="tablet">Графічний планшет Huion</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="label-col">Вид оплати:</td>
+            <td>
+                <label><input type="radio" name="payment_type" value="cash" checked> Готівковий розрахунок</label><br><br>
+                <label><input type="radio" name="payment_type" value="cashless"> Безготівковий розрахунок</label>
+            </td>
+        </tr>
+        <tr>
+            <td class="label-col">Додаткова інформація при відповіді:</td>
+            <td>
+                <label><input type="checkbox" name="extra_info[]" value="balance"> Дані про залишки на рахунку</label><br><br>
+                <label><input type="checkbox" name="extra_info[]" value="payments_history"> Список останніх виплат по рахунку</label>
+            </td>
+        </tr>
+        <tr>
+            <td class="label-col">
+                <label for="comments">Довільні коментарі користувача:</label>
+            </td>
+            <td>
+                <textarea id="comments" name="comments" rows="4" placeholder="Вкажіть побажання щодо доставки або замовлення..."></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="actions">
+                <input type="submit" value="Надіслати замовлення">
+                <input type="reset" value="Очистити форму">
+            </td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>
