@@ -1,0 +1,118 @@
+body {
+    background-color: #fff3f7;
+    background-image: url("images/bg-pattern.png");
+    background-repeat: repeat;
+    color: #2b141e;
+    font-family: "Times New Roman", Georgia, serif;
+    margin: 20px 5%;
+}
+
+h1 {
+    font-weight: bold;
+    text-align: center;
+    color: #9e194f;
+    font-style: normal;
+    font-size: 28pt;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+nav {
+    text-align: center;
+    background-color: #ffe6f0;
+    border: 1px solid #e39bb8;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin-bottom: 25px;
+}
+
+nav a {
+    margin: 0 12px;
+    font-size: 14pt;
+    font-style: normal;
+    font-weight: bold;
+}
+
+a:link {
+    color: #c2185b;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #6a1b9a;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #e91e63;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #ff0000;
+    text-decoration: underline;
+}
+
+.content-block {
+    background-color: rgba(255, 250, 252, 0.94);
+    border: 1px solid #ecc0d2;
+    border-radius: 10px;
+    padding: 20px 25px;
+    margin-bottom: 25px;
+    overflow: hidden; /* Щоб коректно обтікалися рисунки */
+}
+
+p {
+    text-indent: 35px;
+    text-align: justify;
+    font-style: italic;
+    font-size: 14pt;
+    line-height: 1.6;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 0;
+    margin-bottom: 14px;
+    color: #1f1419;
+}
+
+.img-right {
+    float: right;
+    width: 240px;
+    max-width: 40%;
+    margin: 5px 5% 12px 20px;
+    border: 2px solid #e59bb8;
+    border-radius: 8px;
+    padding: 4px;
+    background-color: #ffffff;
+}
+
+.img-left {
+    float: left;
+    width: 240px;
+    max-width: 40%;
+    margin: 5px 20px 12px 5%;
+    border: 2px solid #e59bb8;
+    border-radius: 8px;
+    padding: 4px;
+    background-color: #ffffff;
+}
+
+.img-center {
+    display: block;
+    width: 320px;
+    max-width: 80%;
+    margin: 15px auto;
+    border: 2px solid #e59bb8;
+    border-radius: 8px;
+    padding: 4px;
+    background-color: #ffffff;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 12px;
+    border-top: 1px solid #e5a9c1;
+    font-size: 12pt;
+    font-style: italic;
+}
