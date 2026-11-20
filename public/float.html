@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Завдання 1 — Float</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+      background: #ffffff;
+    }
+
+    .wrapper {
+      width: 100%;
+      min-height: 100vh;
+      padding: 3px;
+      background: #ffffff;
+    }
+
+    .wrapper::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    .box {
+      float: left;
+      margin: 3px;
+      border: 1px solid #e5e7eb;
+    }
+
+    .b-blue   { background: #5894d2; }
+    .b-cyan   { background: #5ed1d1; }
+    .b-red    { background: #db6b6b; }
+    .b-yellow { background: #f4b400; }
+    .b-green  { background: #2d9966; }
+    .b-gray   { background: #6c787d; }
+    .b-brown  { background: #c25900; }
+
+    .main-area {
+      float: left;
+      width: calc(76% - 6px);
+      margin: 0;
+    }
+
+    .b-blue {
+      width: calc(100% - 6px);
+      height: 22vh;
+    }
+
+    .mid-left {
+      float: left;
+      width: calc(62% - 6px);
+      margin: 0;
+    }
+
+    .b-cyan {
+      width: calc(48% - 6px);
+      height: 16vh;
+    }
+
+    .b-red {
+      width: calc(52% - 6px);
+      height: 16vh;
+    }
+
+    .b-green {
+      width: calc(100% - 6px);
+      height: 20vh;
+    }
+
+    .b-yellow {
+      width: calc(38% - 6px);
+      height: calc(36vh + 6px);
+    }
+
+    .b-gray {
+      width: calc(24% - 6px);
+      height: calc(58vh + 12px);
+    }
+
+    .b-brown {
+      width: calc(100% - 6px);
+      height: 16vh;
+    }
+
+    @media (max-width: 1199px) and (min-width: 950px) {
+      .main-area { width: calc(74% - 6px); }
+      .b-gray { width: calc(26% - 6px); }
+    }
+
+    @media (max-width: 949px) and (min-width: 750px) {
+      .main-area { width: calc(72% - 6px); }
+      .b-gray { width: calc(28% - 6px); }
+      .mid-left, .b-yellow {
+        width: calc(100% - 6px);
+        float: none;
+      }
+      .b-yellow { height: 18vh; }
+      .b-gray { height: calc(74vh + 18px); }
+    }
+
+    @media (max-width: 749px) and (min-width: 500px) {
+      .main-area, .b-gray, .mid-left, .b-yellow, .b-cyan, .b-red, .b-green, .b-blue, .b-brown {
+        float: none;
+        width: calc(100% - 6px);
+        height: 14vh;
+      }
+      .b-blue { height: 18vh; }
+      .b-cyan, .b-red {
+        float: left;
+        width: calc(50% - 6px);
+      }
+      .b-green { clear: both; }
+    }
+
+    /* <500px */
+    @media (max-width: 499px) {
+      .main-area, .b-gray, .mid-left, .b-yellow, .b-cyan, .b-red, .b-green, .b-blue, .b-brown {
+        float: none;
+        width: calc(100% - 6px);
+        height: 12vh;
+      }
+      .b-blue { height: 16vh; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="main-area">
+      <div class="box b-blue"></div>
+      <div class="mid-left">
+        <div class="box b-cyan"></div>
+        <div class="box b-red"></div>
+        <div class="box b-green"></div>
+      </div>
+      <div class="box b-yellow"></div>
+    </div>
+    <div class="box b-gray"></div>
+    <div class="box b-brown"></div>
+  </div>
+</body>
+</html>

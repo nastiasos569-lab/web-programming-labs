@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Завдання 1 — Grid Layout</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+    }
+
+    .wrapper {
+      display: grid;
+      min-height: 100vh;
+      padding: 3px;
+      gap: 3px;
+      background: #ffffff;
+      grid-template-columns: 1.5fr 1.6fr 2fr 1.9fr;
+      grid-template-rows: 1.4fr 1fr 1.25fr 0.9fr;
+      grid-template-areas:
+        "blue   blue   blue   gray"
+        "cyan   red    yellow gray"
+        "green  green  yellow gray"
+        "brown  brown  brown  brown";
+    }
+
+    .box {
+      border: 1px solid #e5e7eb;
+      min-height: 60px;
+    }
+
+    .b-blue   { grid-area: blue;   background: #5894d2; }
+    .b-cyan   { grid-area: cyan;   background: #5ed1d1; }
+    .b-red    { grid-area: red;    background: #db6b6b; }
+    .b-yellow { grid-area: yellow; background: #f4b400; }
+    .b-green  { grid-area: green;  background: #2d9966; }
+    .b-gray   { grid-area: gray;   background: #6c787d; }
+    .b-brown  { grid-area: brown;  background: #c25900; }
+
+    @media (min-width: 1200px) {
+      .wrapper {
+        grid-template-columns: 1.55fr 1.65fr 2.05fr 1.85fr;
+      }
+    }
+
+    @media (max-width: 1199px) and (min-width: 950px) {
+      .wrapper {
+        grid-template-columns: 1.4fr 1.5fr 1.8fr 1.8fr;
+      }
+    }
+
+    @media (max-width: 949px) and (min-width: 750px) {
+      .wrapper {
+        grid-template-columns: 1fr 1fr 1.2fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+          "blue   blue   gray"
+          "cyan   red    gray"
+          "green  green  gray"
+          "yellow yellow gray"
+          "brown  brown  brown";
+      }
+    }
+
+    @media (max-width: 749px) and (min-width: 500px) {
+      .wrapper {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+          "blue   blue"
+          "cyan   red"
+          "green  green"
+          "yellow yellow"
+          "gray   gray"
+          "brown  brown";
+      }
+    }
+
+    @media (max-width: 499px) {
+      .wrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+          "blue"
+          "cyan"
+          "red"
+          "yellow"
+          "green"
+          "gray"
+          "brown";
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="box b-blue"></div>
+    <div class="box b-cyan"></div>
+    <div class="box b-red"></div>
+    <div class="box b-yellow"></div>
+    <div class="box b-green"></div>
+    <div class="box b-gray"></div>
+    <div class="box b-brown"></div>
+  </div>
+</body>
+</html>

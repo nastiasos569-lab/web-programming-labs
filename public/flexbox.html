@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Завдання 1 — Flexbox</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      padding: 3px;
+      gap: 3px;
+      background: #ffffff;
+    }
+
+    .top-section {
+      display: flex;
+      flex: 1 1 auto;
+      gap: 3px;
+      min-height: 75vh;
+    }
+
+    .left-column {
+      display: flex;
+      flex-direction: column;
+      flex: 3 1 0;
+      gap: 3px;
+    }
+
+    .middle-row {
+      display: flex;
+      flex: 2 1 auto;
+      gap: 3px;
+    }
+
+    .cyan-green-col {
+      display: flex;
+      flex-direction: column;
+      flex: 1.65 1 0;
+      gap: 3px;
+    }
+
+    .cyan-red-row {
+      display: flex;
+      flex: 1 1 0;
+      gap: 3px;
+    }
+
+    .box {
+      border: 1px solid #e5e7eb;
+      min-height: 70px;
+    }
+
+    .b-blue   { background: #5894d2; flex: 1 1 0; }
+    .b-cyan   { background: #5ed1d1; flex: 0.9 1 0; }
+    .b-red    { background: #db6b6b; flex: 1.1 1 0; }
+    .b-green  { background: #2d9966; flex: 1.25 1 0; }
+    .b-yellow { background: #f4b400; flex: 1 1 0; }
+    .b-gray   { background: #6c787d; flex: 1 1 0; }
+    .b-brown  { background: #c25900; flex: 0 0 16vh; }
+
+    @media (min-width: 1200px) {
+      .left-column { flex: 3.15 1 0; }
+      .b-gray { flex: 1 1 0; }
+    }
+
+    @media (max-width: 1199px) and (min-width: 950px) {
+      .left-column { flex: 2.8 1 0; }
+      .b-gray { flex: 1 1 0; }
+    }
+
+    @media (max-width: 949px) and (min-width: 750px) {
+      .middle-row {
+        flex-direction: column;
+      }
+      .b-yellow {
+        flex: 0 0 140px;
+      }
+    }
+
+    @media (max-width: 749px) and (min-width: 500px) {
+      .top-section {
+        flex-direction: column;
+        min-height: auto;
+      }
+      .b-gray {
+        flex: 0 0 120px;
+      }
+    }
+
+    @media (max-width: 499px) {
+      .top-section,
+      .middle-row,
+      .cyan-red-row {
+        flex-direction: column;
+        min-height: auto;
+      }
+      .box {
+        flex: 0 0 90px;
+      }
+      .b-brown {
+        flex: 0 0 110px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="top-section">
+      <div class="left-column">
+        <div class="box b-blue"></div>
+        <div class="middle-row">
+          <div class="cyan-green-col">
+            <div class="cyan-red-row">
+              <div class="box b-cyan"></div>
+              <div class="box b-red"></div>
+            </div>
+            <div class="box b-green"></div>
+          </div>
+          <div class="box b-yellow"></div>
+        </div>
+      </div>
+      <div class="box b-gray"></div>
+    </div>
+    <div class="box b-brown"></div>
+  </div>
+</body>
+</html>
