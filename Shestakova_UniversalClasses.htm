@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Універсальні класи стилів</title>
+    <style>
+        body {
+            background-color: #fff5f8;
+            color: #4a2334;
+            font-family: Arial, Helvetica, sans-serif;
+            max-width: 820px;
+            margin: 25px auto;
+            padding: 20px;
+            line-height: 1.55;
+        }
+        .chapter-heading {
+            font-size: 20pt;
+            font-weight: bold;
+            color: #ad1d56;
+            background-color: #ffe8f1;
+            padding: 8px 14px;
+            border-radius: 6px;
+            margin-top: 22px;
+            margin-bottom: 10px;
+        }
+        .body-copy {
+            font-size: 14pt;
+            color: #421d2d;
+            text-align: justify;
+            margin: 8px 0 14px 0;
+        }
+        .callout-note {
+            font-size: 12.5pt;
+            font-style: italic;
+            color: #7c2349;
+            background-color: #fff0f6;
+            border-left: 4px solid #e38bb0;
+            padding: 8px 12px;
+            margin: 10px 0 16px 0;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="chapter-heading">Розділ I. Універсальність CSS-класів</div>
+    <p class="body-copy">
+        Класи без прив'язки до імені тегу можна призначати будь-яким елементам розмітки — абзацам, блокам або вбудованим фрагментам.
+    </p>
+    <div class="callout-note">
+        Виноска: універсальний клас зручно використовувати, коли однаковий стиль потрібен для різних тегів.
+    </div>
+
+    <div class="chapter-heading">Розділ II. Гнучкість у верстці</div>
+    <div class="body-copy">
+        Цей блок оформлено тим самим класом тексту, що й попередній абзац, завдяки чому вигляд основного тексту залишається узгодженим.
+    </div>
+    <p class="body-copy">
+        Навіть додавши <span class="callout-note">невелику вбудовану виноску</span> всередину речення, можна зберегти акуратний візуальний акцент.
+    </p>
+
+    <div class="chapter-heading">Розділ III. Порядок і підтримка</div>
+    <p class="body-copy">
+        Чітке розмежування назв розділів, основного тексту та приміток спрощує редагування сторінки в майбутньому.
+    </p>
+    <div class="callout-note">
+        Виноска: продумана система класів зменшує дублювання CSS-правил.
+    </div>
+
+</body>
+</html>

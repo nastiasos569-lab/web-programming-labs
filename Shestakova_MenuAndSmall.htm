@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Класи menu та small</title>
+    <style>
+        body {
+            background-color: #fff5f8;
+            color: #4a2334;
+            font-family: Arial, Helvetica, sans-serif;
+            max-width: 820px;
+            margin: 25px auto;
+            padding: 20px;
+            line-height: 1.55;
+        }
+        .nav-bar {
+            background-color: #ffe6f0;
+            border: 1px solid #e59db9;
+            border-radius: 8px;
+            padding: 12px 16px;
+            margin-bottom: 22px;
+        }
+        .menu {
+            font-size: 14pt;
+            font-weight: bold;
+            color: #9e194f;
+            text-decoration: none;
+            background-color: #ffd6e6;
+            padding: 6px 14px;
+            border-radius: 5px;
+            margin-right: 8px;
+            display: inline-block;
+        }
+        .menu:hover {
+            background-color: #ffbdd6;
+            color: #6b0d33;
+        }
+        .small {
+            font-size: 10pt;
+            color: #7d3b56;
+            font-style: italic;
+        }
+        .info-card {
+            background-color: #ffffff;
+            border: 1px solid #f0c2d4;
+            border-radius: 8px;
+            padding: 18px 20px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #a81c54;
+            margin-top: 0;
+        }
+        footer {
+            margin-top: 24px;
+            padding-top: 12px;
+            border-top: 1px solid #e8b3c8;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav-bar">
+        <a href="#about" class="menu">Головна</a>
+        <a href="#details" class="menu">Про сторінку</a>
+        <a href="#contacts" class="menu">Контакти</a>
+    </nav>
+
+    <div class="info-card" id="about">
+        <h1>Сторінка з елементами меню та інформаційними примітками</h1>
+        <p>
+            Цей документ демонструє застосування класу <strong>menu</strong> для пунктів навігації та класу <strong>small</strong> для допоміжних повідомлень.
+        </p>
+        <p class="small">Адреса поточної сторінки: Shestakova_MenuAndSmall.htm</p>
+    </div>
+
+    <div class="info-card" id="details">
+        <h2>Додаткові відомості</h2>
+        <p>
+            Короткі службові підписи й технічні деталі оформлюються дрібнішим шрифтом, щоб не відволікати від головного змісту.
+        </p>
+        <p class="small">Останнє оновлення: листопад 2026 року.</p>
+    </div>
+
+    <footer id="contacts">
+        <p class="small">Автор: Шестакова Анастасія | Група 301-ТН</p>
+    </footer>
+
+</body>
+</html>
